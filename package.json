@@ -16,15 +16,12 @@
     "high",
     "guillemet"
   ],
+  "repository": "https://github.com/wooorm/quotation",
+  "bugs": "https://github.com/wooorm/quotation/issues",
+  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "files": [
     "index.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wooorm/quotation.git"
-  },
-  "bugs": "https://github.com/wooorm/quotation/issues",
-  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "dependencies": {},
   "devDependencies": {
     "browserify": "^13.0.0",
