@@ -30,18 +30,13 @@
     "browserify": "^13.0.0",
     "esmangle": "^1.0.0",
     "istanbul": "^0.4.0",
-    "remark": "^3.0.0",
-    "remark-comment-config": "^2.0.2",
-    "remark-github": "^2.0.0",
-    "remark-lint": "^2.0.2",
-    "remark-slug": "^3.0.1",
-    "remark-validate-links": "^2.0.2",
-    "remark-yaml-config": "^2.0.0",
+    "remark-cli": "^2.1.0",
+    "remark-preset-wooorm": "^1.0.0",
     "tape": "^4.0.0",
     "xo": "^0.17.1"
   },
   "scripts": {
-    "build-md": "remark . --quiet --frail",
+    "build-md": "remark . --quiet --frail --output",
     "build-bundle": "browserify index.js --bare -s quotation > quotation.js",
     "build-mangle": "esmangle quotation.js > quotation.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
@@ -55,5 +50,8 @@
     "ignore": [
       "quotation.js"
     ]
+  },
+  "remarkConfig": {
+    "presets": "wooorm"
   }
 }
