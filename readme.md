@@ -23,7 +23,7 @@ quotation('one', '“', '”'); //=> '“one”'
 
 ## API
 
-### `quotation(value, [open[, close]])`
+### `quotation(value[, open[, close]])`
 
 Quote a value.
 
