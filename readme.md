@@ -30,11 +30,11 @@ Quote a value.
 ###### Parameters
 
 *   `value` (`string` or `Array.<string>`)
-    — Value to wrap in quotes;
+    — Value to wrap in quotes
 *   `open` (`string`, default: `"`)
-    — Character to add at start of `value`;
+    — Character to add at start of `value`
 *   `close` (`string`, default: `open` or `"`)
-    — Character to add at end of `value`.
+    — Character to add at end of `value`
 
 ## License
 
