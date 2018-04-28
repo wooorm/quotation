@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-- '4.0'
-- '8.0'
+- lts/boron
+- node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: ZaHgDzxvC+Ra8UHN8VrI+mkyR6CoSshNcV0Fa4EBkcngMMuuU42/3BCUgiGz+9xcoddodQjDnA2E0l6TucZAElrEi9bJ3ribJFfD+QlZuY8oeD2cJ28OX3M+6A6O9tL0pOD9J//9Vw9GtaEJu/f/rF1kAZ857OK0wHRlQ9cg2I0cTY6h4qr+UslPzbiOlajcUA2TSHxyDuh9cWl3RfMhYzPsxh94cjgUzPNHCTF7uzglGpBZH9rkNGW2j3lmCreTK8UWCuFyan7zI9BOFk5duOidqep4Lt6FtWK9TZNcdEFqkMBtuCR7LJeZOhgCbn1qNk8EqxTRbcdkxb56i5jg8gZ6j+RC/cnhx5eHN+tWmC7SZWA916vQnxAxnVlsswmv6seG2cuFifRK7xIUtr/1NBosrbJo0XWHXDYmF7liiqzZDkswf71zmsYa5ibbTIY6hNv+JGRL+/K/RpL9ARn9pXE7TbNzcPaF6cxCFTMBVDUpRYhmxB448nuP49wRrtv79sPWgQQ5fIL3eRY4Sg8bDnTDka2vOOQYNwQboJ9fR/4qTlt/ozLuPiuuTKzScBofvF99QqseFo/VBJkhr61rF9u5uqwoG/k2icew6UbW/v0tP54yMZLDK2eDWjviCIHrHVyYRE7inFvm71DE/s2ZTnRKwFtweJsng4imsFOBgU8=
   file:
@@ -12,4 +13,3 @@ deploy:
     - "quotation.min.js"
   on:
     tags: true
-    node: '8.0'
