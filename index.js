@@ -1,33 +1,33 @@
-'use strict';
+'use strict'
 
-module.exports = quotation;
+module.exports = quotation
 
-var C_DEFAULT = '"';
+var C_DEFAULT = '"'
 
 /* Quote text. */
 function quotation(value, open, close) {
-  var result;
-  var index;
-  var length;
+  var result
+  var index
+  var length
 
-  open = open || C_DEFAULT;
-  close = close || open;
+  open = open || C_DEFAULT
+  close = close || open
 
   if (typeof value === 'string') {
-    return open + value + close;
+    return open + value + close
   }
 
   if (typeof value !== 'object' || !('length' in value)) {
-    throw new Error('Expected string or array of strings');
+    throw new Error('Expected string or array of strings')
   }
 
-  result = [];
-  length = value.length;
-  index = -1;
+  result = []
+  length = value.length
+  index = -1
 
   while (++index < length) {
-    result[index] = quotation(value[index], open, close);
+    result[index] = quotation(value[index], open, close)
   }
 
-  return result;
+  return result
 }

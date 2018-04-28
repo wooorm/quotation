@@ -13,12 +13,12 @@ npm install quotation
 ## Usage
 
 ```js
-var quotation = require('quotation');
+var quotation = require('quotation')
 
-quotation('one'); //=> '"one"'
-quotation(['one', 'two']); //=> ['"one"', '"two"']
-quotation('one', '\''); //=> '\'one\''
-quotation('one', '“', '”'); //=> '“one”'
+quotation('one') // => '"one"'
+quotation(['one', 'two']) // => ['"one"', '"two"']
+quotation('one', "'") // => '\'one\''
+quotation('one', '“', '”') // => '“one”'
 ```
 
 ## API
