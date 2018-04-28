@@ -16,7 +16,7 @@
     "high",
     "guillemet"
   ],
-  "repository": "https://github.com/wooorm/quotation",
+  "repository": "wooorm/quotation",
   "bugs": "https://github.com/wooorm/quotation/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "files": [
