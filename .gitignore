@@ -5,3 +5,4 @@ coverage/
 node_modules/
 quotation.js
 quotation.min.js
+yarn.lock
