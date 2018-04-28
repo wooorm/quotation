@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var quotation = require('./');
+var quotation = require('.');
 
 test('quotation(url)', function (t) {
   t.throws(
