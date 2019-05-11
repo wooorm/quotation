@@ -1,4 +1,9 @@
-# quotation [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# quotation
+
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 Quote a value.
 
@@ -42,13 +47,21 @@ Quote a value.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/quotation.svg
+[build-badge]: https://img.shields.io/travis/wooorm/quotation.svg
 
-[travis]: https://travis-ci.org/wooorm/quotation
+[build]: https://travis-ci.org/wooorm/quotation
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/quotation.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/quotation.svg
 
-[codecov]: https://codecov.io/github/wooorm/quotation
+[coverage]: https://codecov.io/github/wooorm/quotation
+
+[downloads-badge]: https://img.shields.io/npm/dm/quotation.svg
+
+[downloads]: https://www.npmjs.com/package/quotation
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/quotation.svg
+
+[size]: https://bundlephobia.com/result?p=quotation
 
 [npm]: https://docs.npmjs.com/cli/install
 
