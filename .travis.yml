@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: w6rf4RWLh/992zFv2EsSjDgxx80LeMu0RBdAOr3agHO8APbeyjZxtKt6qZuG0GHXT2yME54CZz2dIvolv4w+mw8d5epTMFAFoBNQFqnWRTCMxi7uVNKzidV+axGbS9byyoUYzU4H3gFz9+6pEjSwIqb2qWnkjfr0XF/eD0VF5zewEkZoLnjtc/dU756hKbzJewE777pJPRv3+uZsx3DTs8UhDn/MzD5nA+ArCRtZCyAfyr3zQsIToS8XG9+jj1pUKY/MrKTvnPHxMt7WkM+xNz0Vb3O73Rkkcyjz0Toz4zP/Gb6jmyxfMmgMvP4iYvxSC+21XTigtC0jiKxx9WUlSEV75wSrl4kPzIQHbCS6TbN65WyiD3Jo193yKn9cSw2GN8RBWjeQeWQbmrskazO0u3F35g9+LHmPdjKuiWd9EUp8YZ42vrt9FfjC090KznFJ6LUP3sjhP1ICqeCuRVFVrmywkT9TIcmpvv6cpGgGek+GH2Sonw90i71uY2jIBMizF6bIeSE2rtdVxrkchIAm6JYQWq6WbJrHZhigGXFh25bq1ojGljPFLyPZ1Z9lti3Eg1iNBeVBQIEBrVfu+RQaJ/xa/Ok1hgW2SEDYLI1VoZzlDN96PwDdERkKmfxOyaCyDNynpgV1tKT7YUNJpdGRFmBo67UuozD/OXvVY95o/q4=
+    secure: UYXyl1wEK9BOWwiFj4tDXGSARjZK42EBLmZA2JJmOcYEPbnS+uDG8svgE84SGTyHGb/UiWdkAGa6gtCZymG/cm7GAGtZq7OvVMExW58GytJUw3HqYQ3MrUY+KxbeyelApXU8RYoeFx9pMt6katgGkGZjqnnIkvQQVPv80mmtr0NsV69thw3vWyXWbVvBFf36RkyIoUPtNvxyukDrYzhw9b2lsabPGrT8VBw5v9YRU/v9oPnASFPdZjMw23PD3FsiWIMm0P/Nlzi5TRDjAUa6GmtJJmqEK6aZZSjQMVVZMhxhHNIx0FQGB1Vb6iIzuasupDRPVJ00aw8092wuzgfRZEVW953Dc/QC8ij9wWcRIwhXC2tYOfcKv2U/0FXl9SxyABCtt23+hLB1kHz6u8R+uqKMZ/5qsZZYwpquzsZDjHlXY7jOsKThMAV7TEB03yUrQw55jbrLckYHNKMQlY7dWOgSo/SXWWRZ6P90SoWeqk53CkNNAXC7wWm/0qAt9S0/CGQu3VPplZM4phmeY3VdJaSandsnFhbwgJEXAluViYSRUFE6hUX+o+vlJ7N5MLVhnb8EWl7RvwFFiLrygTYOAM+fvcCWvBSDbBz6EJ7nHZpw/NRdkxVUDLhliVm2pDu7DWGnFQ2mFu0AE96VuWoju8afpg2dTERfghLI4ygOlPc=
   file:
-    - "quotation.js"
-    - "quotation.min.js"
+    - 'quotation.js'
+    - 'quotation.min.js'
   on:
     tags: true
