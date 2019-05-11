@@ -4,7 +4,6 @@ module.exports = quotation
 
 var C_DEFAULT = '"'
 
-/* Quote text. */
 function quotation(value, open, close) {
   var result
   var index
