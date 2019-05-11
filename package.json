@@ -18,7 +18,10 @@
   ],
   "repository": "wooorm/quotation",
   "bugs": "https://github.com/wooorm/quotation/issues",
-  "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
   "files": [
     "index.js"
   ],
