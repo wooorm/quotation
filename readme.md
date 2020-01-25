@@ -7,15 +7,15 @@
 
 Quote a value.
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install quotation
 ```
 
-## Usage
+## Use
 
 ```js
 var quotation = require('quotation')
