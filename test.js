@@ -3,9 +3,9 @@
 var test = require('tape')
 var quotation = require('.')
 
-test('quotation(url)', function(t) {
+test('quotation(url)', function (t) {
   t.throws(
-    function() {
+    function () {
       quotation(true)
     },
     /Error: Expected string or array of strings/,
@@ -13,7 +13,7 @@ test('quotation(url)', function(t) {
   )
 
   t.throws(
-    function() {
+    function () {
       quotation({})
     },
     /Error: Expected string or array of strings/,
