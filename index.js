@@ -2,18 +2,14 @@
 
 module.exports = quotation
 
-var C_DEFAULT = '"'
-
 function quotation(value, open, close) {
+  var start = open || '"'
+  var end = close || start
   var result
   var index
-  var length
-
-  open = open || C_DEFAULT
-  close = close || open
 
   if (typeof value === 'string') {
-    return open + value + close
+    return start + value + end
   }
 
   if (typeof value !== 'object' || !('length' in value)) {
@@ -21,11 +17,10 @@ function quotation(value, open, close) {
   }
 
   result = []
-  length = value.length
   index = -1
 
-  while (++index < length) {
-    result[index] = quotation(value[index], open, close)
+  while (++index < value.length) {
+    result[index] = quotation(value[index], start, end)
   }
 
   return result
