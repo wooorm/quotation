@@ -4,6 +4,7 @@ import {quotation} from './index.js'
 test('quotation(url)', function (t) {
   t.throws(
     function () {
+      // @ts-ignore
       quotation(true)
     },
     /Error: Expected string or array of strings/,
@@ -12,6 +13,7 @@ test('quotation(url)', function (t) {
 
   t.throws(
     function () {
+      // @ts-ignore
       quotation({})
     },
     /Error: Expected string or array of strings/,
