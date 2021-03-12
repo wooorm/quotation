@@ -5,6 +5,7 @@
  * }} Quotation
  */
 
+// prettier-ignore
 /** @type {Quotation} */
 export const quotation = (
   /**
@@ -16,24 +17,24 @@ export const quotation = (
    * @returns {string | string[]}
    */
   function (value, open, close) {
-  var start = open || '"'
-  var end = close || start
-  /** @type {string[]} */
-  var result = []
-  var index = -1
+    var start = open || '"'
+    var end = close || start
+    /** @type {string[]} */
+    var result = []
+    var index = -1
 
-  if (Array.isArray(value)) {
-    while (++index < value.length) {
-      result[index] = start + value[index] + end
+    if (Array.isArray(value)) {
+      while (++index < value.length) {
+        result[index] = start + value[index] + end
+      }
+
+      return result
     }
 
-    return result
+    if (typeof value === 'string') {
+      return start + value + end
+    }
+
+    throw new TypeError('Expected string or array of strings')
   }
-
-  if (typeof value === 'string') {
-    return start + value + end
-  }
-
-  throw new TypeError('Expected string or array of strings')
-})
-
+)
