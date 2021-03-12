@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var quotation = require('.')
+import test from 'tape'
+import {quotation} from './index.js'
 
 test('quotation(url)', function (t) {
   t.throws(

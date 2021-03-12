@@ -1,5 +1,2 @@
 coverage/
-*.json
 *.md
-quotation.js
-quotation.min.js

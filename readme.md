@@ -9,6 +9,9 @@ Quote a value.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,7 +21,7 @@ npm install quotation
 ## Use
 
 ```js
-var quotation = require('quotation')
+import {quotation} from 'quotation'
 
 quotation('one') // => '"one"'
 quotation(['one', 'two']) // => ['"one"', '"two"']
@@ -28,13 +31,16 @@ quotation('one', '“', '”') // => '“one”'
 
 ## API
 
+This package exports the following identifiers: `quotation`.
+There is no default export.
+
 ### `quotation(value[, open[, close]])`
 
 Quote a value.
 
 ###### Parameters
 
-*   `value` (`string` or `Array.<string>`)
+*   `value` (`string` or `string[]`)
     — Value to wrap in quotes
 *   `open` (`string`, default: `"`)
     — Character to add at start of `value`

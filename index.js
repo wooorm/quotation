@@ -1,8 +1,4 @@
-'use strict'
-
-module.exports = quotation
-
-function quotation(value, open, close) {
+export function quotation(value, open, close) {
   var start = open || '"'
   var end = close || start
   var result
