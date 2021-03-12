@@ -47,9 +47,9 @@ Quote a value.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/quotation.svg
+[build-badge]: https://github.com/wooorm/quotation/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/quotation
+[build]: https://github.com/wooorm/quotation/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/quotation.svg
 
