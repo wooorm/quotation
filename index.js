@@ -1,13 +1,9 @@
-/**
- * @typedef {{
+// prettier-ignore
+/** @type {{
  *   (value: string, open?: string, close?: string): string
  *   (value: string[], open?: string, close?: string): string[]
- * }} Quotation
- */
-
-// prettier-ignore
-/** @type {Quotation} */
-export const quotation = (
+ * }} */
+export var quotation = (
   /**
    * Quote a value.
    *
