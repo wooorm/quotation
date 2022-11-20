@@ -1,8 +1,9 @@
-import test from 'tape'
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import {quotation} from './index.js'
 
-test('quotation(url)', function (t) {
-  t.throws(
+test('quotation(url)', function () {
+  assert.throws(
     function () {
       // @ts-ignore
       quotation(true)
@@ -11,7 +12,7 @@ test('quotation(url)', function (t) {
     'should fail when given a boolean'
   )
 
-  t.throws(
+  assert.throws(
     function () {
       // @ts-ignore
       quotation({})
@@ -20,29 +21,35 @@ test('quotation(url)', function (t) {
     'should fail when given an object'
   )
 
-  t.equal(quotation('a'), '"a"', 'should quote a string')
+  assert.equal(quotation('a'), '"a"', 'should quote a string')
 
-  t.deepEqual(quotation(['a', 'b']), ['"a"', '"b"'], 'should quote an array')
+  assert.deepEqual(
+    quotation(['a', 'b']),
+    ['"a"', '"b"'],
+    'should quote an array'
+  )
 
-  t.equal(quotation('a', "'"), "'a'", 'should quote a string given `character`')
+  assert.equal(
+    quotation('a', "'"),
+    "'a'",
+    'should quote a string given `character`'
+  )
 
-  t.deepEqual(
+  assert.deepEqual(
     quotation(['a', 'b'], "'"),
     ["'a'", "'b'"],
     'should quote an array given `character`'
   )
 
-  t.equal(
+  assert.equal(
     quotation('a', '“', '”'),
     '“a”',
     'should quote a string given `open` and `close`'
   )
 
-  t.deepEqual(
+  assert.deepEqual(
     quotation(['a', 'b'], '“', '”'),
     ['“a”', '“b”'],
     'should quote an array given `open` and `close`'
   )
-
-  t.end()
 })
