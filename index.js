@@ -11,27 +11,29 @@
 export const quotation =
   /**
    * @type {{
-   *   (value: string, open?: string, close?: string): string
-   *   (value: string[], open?: string, close?: string): string[]
+   *   (value: string, open?: string | null | undefined, close?: string | null | undefined): string
+   *   (value: ReadonlyArray<string>, open?: string | null | undefined, close?: string | null | undefined): string[]
    * }}
    */
   (
     /**
-     * @param {string|Array<string>} value
-     * @param {string} open
-     * @param {string} close
-     * @returns {string|string[]}
+     * @param {ReadonlyArray<string> | string} value
+     * @param {string | null | undefined} open
+     * @param {string | null | undefined} close
+     * @returns {Array<string> | string}
      */
     function (value, open, close) {
       const start = open || '"'
       const end = close || start
-      /** @type {string[]} */
-      const result = []
       let index = -1
 
       if (Array.isArray(value)) {
-        while (++index < value.length) {
-          result[index] = start + value[index] + end
+        const list = /** @type {ReadonlyArray<string>} */ (value)
+        /** @type {Array<string>} */
+        const result = []
+
+        while (++index < list.length) {
+          result[index] = start + list[index] + end
         }
 
         return result
